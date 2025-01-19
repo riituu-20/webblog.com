@@ -1,13 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABOUT The Website</title>
+    <title>About Us - My Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const stars = document.querySelectorAll('.star');
+            const ratingMessage = document.getElementById('rating-message');
+
+            stars.forEach(star => {
+                star.addEventListener('click', function () {
+                    const rating = this.getAttribute('data-value');
+
+                    // Remove 'selected' class from all stars
+                    stars.forEach(s => s.classList.remove('selected'));
+
+                    // Add 'selected' class to the clicked star and all previous stars
+                    for (let i = 0; i < rating; i++) {
+                        stars[i].classList.add('selected');
+                    }
+
+                    // Display the rating message
+                    ratingMessage.textContent = `You rated this post: ${rating} star${rating > 1 ? 's' : ''}`;
+                });
+            });
+        });
+    </script>
 </head>
+
 <body>
-    <div class="container">
-        
-    </div>
+    <header>
+        <h1>About Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="about-section">
+            <h2>Welcome to My Blog!</h2>
+            <p>My Blog is a space where I share my thoughts, experiences, and insights on various topics including
+                technology, lifestyle, travel, and more. I believe in the power of storytelling and aim to inspire
+                others through my writing.</p>
+
+            <h3>Our Mission</h3>
+            <p>Our mission is to create a community of readers and writers who are passionate about sharing knowledge
+                and experiences. We strive to provide valuable content that resonates with our audience.</p>
+
+            <h3>Meet the Author</h3>
+            <p>Hi! I'm Kumawat Ritika , the creator of this blog. I have a passion for writing and a love for learning.
+                When I'm not blogging, you can find me exploring new places, reading books, or enjoying a cup of coffee.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <section class="rating-section">
+            <h2>RATING US</h2>
+            <div class="stars" id="star-rating">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <p id="rating-message"></p>
+        </section>
+        <p>&copy; 2025 My Blog. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>
