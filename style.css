@@ -12,7 +12,7 @@
 
 .navitems {
     display: flex;
-    gap: 445px;
+    gap: 540px;
     background-color: rgb(255, 255, 255);
     position: sticky;
     top: 0;
