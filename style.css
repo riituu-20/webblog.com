@@ -251,8 +251,13 @@ padding: 8px;
    padding-bottom: 50px;
 }
 
-@media only screen and (max-width : 455px) {
+@media only screen and (max-width : 445px) {
    .secondsection{
      flex-direction: column;
+   }
+   body{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
    }
 }
