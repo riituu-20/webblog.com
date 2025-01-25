@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url('logbg.webp'); /* Replace with your background image */
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal {
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 300px;
+            border-radius: 5px;
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #222c25;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #395250;
+        }
+        #error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button id="loginButton">Login</button>
+        <p id="error"></p>
+    </div>
+</div>
+
+<script>
+    // Show the modal when the page loads
+    window.onload = function() {
+        document.getElementById('myModal').style.display = 'block';
+    };
+
+    document.getElementById('loginButton').addEventListener('click', function() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        fetch('login.json')
+            .then(response => response.json())
+            .then(users => {
+                const user = users.find(u => u.username === username && u.password === password);
+                if (user) {
+                    // Redirect to home page
+                    window.location.href = 'index.html'; // Change 'home.html' to your actual home page URL
+                } else {
+                    document.getElementById('error').innerText = 'Invalid username or password';
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching user data:', error);
+            });
+    });
+</script>
+
+</body>
+</html>
