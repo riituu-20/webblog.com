@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
-  <link rel="stylesheet" href="log.css">
-  <script>
-    function myFunction() {
-      alert("Login successfully ");
-    }
+    <link rel="stylesheet" href="log.css">
+    <script>
+        const modal = document.getElementById("loginModal");
+        const showLoginBtn = document.getElementById("btn-first");
+        const closeLoginBtn = document.getElementById("closeLoginBtn");
     </script>
-    
 </head>
-<body>
 
-    <div class="login-container">
-        <h2>Login</h2>
-        <form action="index.html">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-            </div>
-            <button type="submit" class="login-btn" onclick="myFunction()">Login</button>
-        </form>
-        <div class="forgot-password">
-            <a href="#">Forgot your password?</a>
+<body>
+    <div class="background">
+    </div>
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close" id="closeLoginBtn">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button id="login"  type="submit">Login</button>
+                <script>
+                    document.getElementById("login").onclick = function () {
+                        window.location.href = "index.html";
+                    };
+                </script>
+                <p class="message">Not registered? <a href="#">Create an account</a></p>
+            </form>
         </div>
     </div>
 </body>
+
 </html>
