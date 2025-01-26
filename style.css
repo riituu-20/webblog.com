@@ -170,22 +170,21 @@
 }
 .secondsection {
     width: 100%;
-   /* overflow: hidden; /* Hide overflow */
+    overflow: hidden; /* Hide overflow */
     position: relative;
 }
 .slider {
     display: flex; /* Use flexbox to align slides in a row */
     transition: transform 0.5s ease; /* Smooth transition */
 }
-/*.set1 {
-    min-width: 100%; /* Each slide takes full width */
-   /* box-sizing: border-box; /* Include padding and border in width */
-   /* padding: 20px;
-    /* background-color: #4CAF50; Green background */
-    /*color: rgb(0, 0, 0);
+.set1 {
+    min-width: 30%;
+    box-sizing: border-box;
+    padding: 20px;
+    color: rgb(0, 0, 0);
     text-align: center;
-    font-size: 24px;
-}*/
+    font-size: 20px;
+}
 
 .thirdsection {
     display: flex;
