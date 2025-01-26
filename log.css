@@ -24,6 +24,7 @@ button {
     transition: background-color 0.3s;
     padding-top: 10px;
   margin-top: 10px;
+  margin-left: 10px;
   font-size: 14px;
 }
 
@@ -51,6 +52,7 @@ button:hover {
     width: 300px; /* Could be more or less, depending on screen size */
     border-radius: 10px;
     animation: slideIn 0.5s ease;
+    padding-right: 85px;
 }
 
 @keyframes slideIn {
@@ -94,7 +96,8 @@ label {
 
 input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
+    margin: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     transition: border-color 0.3s;
