@@ -168,100 +168,24 @@
     word-break: break-word; */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-.set2 img {
-    box-sizing: border-box;
-    width: 320px;
-    padding-bottom: 12px;
-    height: 200px;
+.secondsection {
+    width: 100%;
+   /* overflow: hidden; /* Hide overflow */
+    position: relative;
 }
-
-.set2 h2 {
-    font-size: 18px;
-    line-height: 1.88;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 8px;
+.slider {
+    display: flex; /* Use flexbox to align slides in a row */
+    transition: transform 0.5s ease; /* Smooth transition */
 }
-
-.set2 p {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.try {
-    margin: 19px;
-}
-
-.set3 img {
-    box-sizing: border-box;
-    vertical-align: bottom;
-    height: 195px;
-    width: 320px;
-}
-
-.set3 h2 {
-    font-size: 18px;
-    line-height: 1.88;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 8px;
-}
-
-.set3 p {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.set4 h2 {
-    font-size: 18px;
-    line-height: 1.88;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 8px;
-}
-
-.set4 p {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.set4 img {
-    box-sizing: border-box;
-    height: 195px;
-    width: 320px;
-    vertical-align: bottom
-}
-
-.set5 h2 {
-    font-size: 18px;
-    line-height: 1.88;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 8px;
-}
-
-.set5 p {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.set5 img {
-    box-sizing: border-box;
-    height: 195px;
-    width: 320px;
-    vertical-align: bottom
-}
-
-.set6 h2 {
-    font-size: 18px;
-    line-height: 1.88;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 8px;
-}
-
-.set6 p {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.set6 img {
-    box-sizing: border-box;
-    height: 195px;
-    width: 320px;
-    vertical-align: bottom
-}
+/*.set1 {
+    min-width: 100%; /* Each slide takes full width */
+   /* box-sizing: border-box; /* Include padding and border in width */
+   /* padding: 20px;
+    /* background-color: #4CAF50; Green background */
+    /*color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 24px;
+}*/
 
 .thirdsection {
     display: flex;
