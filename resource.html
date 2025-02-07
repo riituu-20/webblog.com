@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Resource Page</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -13,132 +18,40 @@
         }
 
         header {
-            background-color: #4CAF50;
+            background-color: #303430;
             color: white;
             text-align: center;
             padding: 1em 0;
         }
 
-        .slider {
-            position: relative;
-            max-width: 100%;
-            margin: auto;
-            overflow: hidden;
+        .background {
+            background-image: url('4.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: none;
+            height: 80vh;
         }
-
-        .slides {
-            display: none;
-        }
-
-        .slide img {
-            width: 100%;
-            height: auto;
-        }
-
-        .dots {
-            text-align: center;
-            padding: 10px 0;
-        }
-
-        .dot {
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            cursor: pointer;
-        }
-
-        .dot.active {
-            background-color: #717171;
-        }
-
-        .content {
-            padding: 20px;
-        }
-
-        article {
-            margin-bottom: 20px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #f1f1f1;
+        .cont-list{
+            padding: 112px 60px;
+            font-size: 35px;
+            font-family: 'Times New Roman', Times, serif;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Travel Resource Page</h1>
+        <h1>Resource Page</h1>
     </header>
+    <div class="container background">
+        <h3 class="cont-list">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aperiam, dolores earum blanditiis suscipit
+            tempore nobis voluptatibus eos minus omnis impedit pariatur perspiciatis deleniti consequatur necessitatibus
+            placeat accusantium error quam?
+        </h3>
+    </div>
 
-    <section class="slider">
-        <div class="slides">
-            <div class="slide fade">
-                <img src="1.jpg" alt="Travel Image 1">
-            </div>
-            <div class="slide fade">
-                <img src="2.jpg" alt="Travel Image 2">
-            </div>
-            <div class="slide fade">
-                <img src="3.jpg" alt="Travel Image 3">
-            </div>
-        </div>
-        <div class="dots">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-    </section>
 
-    <section class="content">
-        <h2>Travel Blogs</h2>
-        <article>
-            <h3>Exploring the Mountains</h3>
-            <p>Join us as we explore the breathtaking mountains and the adventures that await.</p>
-        </article>
-        <article>
-            <h3>Beach Getaways</h3>
-            <p>Discover the best beach destinations for your next vacation.</p>
-        </article>
-        <article>
-            <h3>Cultural Experiences</h3>
-            <p>Immerse yourself in the rich cultures of the world through travel.</p>
-        </article>
-    </section>
-
-    <footer>
-        <p>&copy; 2023 Travel Resource Page</p>
-    </footer>
-
-    <script>
-        let slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            let slides = document.getElementsByClassName("slide");
-            let dots = document.getElementsByClassName("dot");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
-            for (let i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
-        }
-
-        function currentSlide(n) {
-            slideIndex = n - 1;
-            showSlides();
-        }
-    </script>
 </body>
 
 </html>
